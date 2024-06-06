@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-import math
-
 """
     floor
 """
+import math
 
 
 def floor(n: float) -> float:
