@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 
-"""Add"""
+"""
+Add
+"""
 
 
 def add(a: float, b: float) -> float:
-    """Sum a and b """
+    """
+        Sum a and b
+    """
     return a + b
