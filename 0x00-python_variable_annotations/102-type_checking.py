@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """zoom_array"""
 
-from typing import List, Union, Tuple
+from typing import List, Tuple
 
 
-def zoom_array(lst: Tuple[int, ...], factor: int = 2) -> List[int]:
-    zoomed_in: List[int] = [
+def zoom_array(lst: Tuple, factor: int = 2) -> List:
+    """ Zoom Array """
+    zoomed_in: List = [
         item for item in lst
-        for _ in range(factor)
+        for i in range(factor)
     ]
     return zoomed_in
