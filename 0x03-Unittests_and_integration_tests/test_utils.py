@@ -61,6 +61,7 @@ class TestClass:
 
     @memoize
     def a_property(self):
+        """Method"""
         return self.a_method()
 
 
