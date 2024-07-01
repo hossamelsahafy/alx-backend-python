@@ -78,7 +78,7 @@ class TestIntegrationGithubOrgClient(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         """
-            A class method called before tests in an individual class are run
+            Set up the test class
         """
 
         config = {'return_value.json.side_effect':
@@ -93,7 +93,7 @@ class TestIntegrationGithubOrgClient(unittest.TestCase):
 
     def test_public_repos(self):
         """
-            Integration test: public repos
+            Test GithubOrgClient.public_repos method
         """
         test_class = GithubOrgClient("google")
 
