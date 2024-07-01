@@ -7,6 +7,7 @@ from parameterized import parameterized
 from utils import access_nested_map, get_json, memoize
 from unittest.mock import patch, Mock
 
+
 class TestAccessNestedMap(unittest.TestCase):
     """
         Define TestAccessNestedMap Class
@@ -16,7 +17,6 @@ class TestAccessNestedMap(unittest.TestCase):
         ({"a": {"b": 2}}, ("a",), {"b": 2}),
         ({"a": {"b": 2}}, ("a", "b"), 2)
     ])
-
     def test_access_nested_map(self, nested_map, path, expected):
         """
             Method For Testing test_access_nested_map
@@ -73,14 +73,12 @@ class TestMemoize(unittest.TestCase):
             Method To Test Memoize
         """
         test_instance = TestClass()
-        
-        with patch.object(TestClass, 'a_method', return_value=42) as mock_method:
+        with patch.object(TestClass, 'a_method', return_value=42) as m_method:
             result1 = test_instance.a_property
             result2 = test_instance.a_property
-            
             self.assertEqual(result1, 42)
             self.assertEqual(result2, 42)
-            mock_method.assert_called_once()
+            m_method.assert_called_once()
 
 
 if __name__ == "__main__":
