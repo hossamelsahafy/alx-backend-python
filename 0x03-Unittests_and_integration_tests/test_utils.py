@@ -55,6 +55,7 @@ class TestGetJson(unittest.TestCase):
 
 
 class TestClass:
+    """Define Test Class"""
     def a_method(self):
         return 42
 
@@ -64,7 +65,13 @@ class TestClass:
 
 
 class TestMemoize(unittest.TestCase):
+    """
+        Define TestMemoize Class
+    """
     def test_memoize(self):
+        """
+            Method To Test Memoize
+        """
         test_instance = TestClass()
         
         with patch.object(TestClass, 'a_method', return_value=42) as mock_method:
